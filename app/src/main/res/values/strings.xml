@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ListaDespensa</string>
+    <string name="titulo_app">Lista de Despensa</string>
+    <string name="agregar">Agregar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="producto">Producto</string>
+    <string name="borrar_producto">Borrar Producto</string>
+    <string name="borrar_todo">Borrar Todo</string>
+    <string name="precio">Precio</string>
+    <string name="actualizar_lista">Actualizar Lista</string>
+    <string name="lista_actualizada">Lista Actualizada...</string>
+    <string name="borrando_lista">Se ha borrado toda la lista...</string>
+    <string name="borrado_posicion">"Producto Borrado "</string>
+    <string name="editar_item">Editar Producto</string>
+
+    <string-array name="arreglo_productos">
+        <item>Pasta de dientes</item>
+        <item>Jabón</item>
+        <item>Papel de baño</item>
+        <item>Cloro</item>
+        <item>Detergente</item>
+    </string-array>
+</resources>
