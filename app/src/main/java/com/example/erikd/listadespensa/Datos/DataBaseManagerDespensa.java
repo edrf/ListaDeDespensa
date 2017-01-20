@@ -12,7 +12,7 @@ package com.example.erikd.listadespensa.Datos;
 
 public class DataBaseManagerDespensa extends DataBaseManager {
 
-    private static final String NOMBRE_TABLA="productos";
+    private static final String TABLA_PRODUCTOS="productos";
 
     private static final String CN_ID="_id";
     private static final String CN_NOMBRE="nombre";
@@ -20,12 +20,18 @@ public class DataBaseManagerDespensa extends DataBaseManager {
     private static final String CN_ESTADO="estado";
 
 
-    public static final String CREATE_TABLE = "create table " + NOMBRE_TABLA + " ("
+
+
+
+
+
+    public static final String CREATE_TABLE_PRODUCTOS = "create table " + TABLA_PRODUCTOS + " ("
             + CN_ID + " integer PRIMARY KEY AUTOINCREMENT, "
             + CN_NOMBRE + " text NOT NULL, "
             + CN_PRECIO + " DECIMAL(10,5) NULL,"
             + CN_ESTADO + " INTEGER DEFAULT 0"
             + ");";
+
 
 
 
@@ -43,7 +49,7 @@ public class DataBaseManagerDespensa extends DataBaseManager {
 
     @Override
     public void insertar_4parametros(String id, String nombre, String precio, String estado) {
-        Log.d("productos_insertar", super.getDb().insert(NOMBRE_TABLA, null, generarContentValues(id, nombre, precio, estado)) + "");
+        Log.d("productos_insertar", super.getDb().insert(TABLA_PRODUCTOS, null, generarContentValues(id, nombre, precio, estado)) + "");
     }
 
     @Override
@@ -57,7 +63,7 @@ public class DataBaseManagerDespensa extends DataBaseManager {
         String [] args= new String[]{id};
 
 
-        Log.d("productos_actualizar", super.getDb().update(NOMBRE_TABLA, valores, "_id=?", args)+"");
+        Log.d("productos_actualizar", super.getDb().update(TABLA_PRODUCTOS, valores, "_id=?", args)+"");
     }
 
 
@@ -68,24 +74,19 @@ public class DataBaseManagerDespensa extends DataBaseManager {
         valores.put(CN_PRECIO, precio);
         valores.put(CN_ESTADO, estado);
 
-
         return valores;
     }
-
-
-
-
 
     @Override
     public void eliminar(String id) {
 
-        super.getDb().delete(NOMBRE_TABLA, CN_ID + "=?", new String[]{id});
+        super.getDb().delete(TABLA_PRODUCTOS, CN_ID + "=?", new String[]{id});
     }
 
     @Override
     public void eliminarTodo() {
 
-        super.getDb().execSQL("DELETE FROM "+ NOMBRE_TABLA+";");
+        super.getDb().execSQL("DELETE FROM "+ TABLA_PRODUCTOS+";");
         Log.d("cursos_eliminar", "Datos borrados");
 
     }
@@ -95,7 +96,7 @@ public class DataBaseManagerDespensa extends DataBaseManager {
         String [] columnas= new String[]{CN_ID, CN_NOMBRE, CN_PRECIO, CN_ESTADO};
 
 
-        return super.getDb().query(NOMBRE_TABLA,columnas,null,null,null,null,null );
+        return super.getDb().query(TABLA_PRODUCTOS,columnas,null,null,null,null,null );
     }
 
     @Override
@@ -103,7 +104,7 @@ public class DataBaseManagerDespensa extends DataBaseManager {
 
         boolean esta=true;
 
-        Cursor resultSet= super.getDb().rawQuery("Select * from " + NOMBRE_TABLA + " WHERE " + CN_ID + "=" + id, null);
+        Cursor resultSet= super.getDb().rawQuery("Select * from " + TABLA_PRODUCTOS + " WHERE " + CN_ID + "=" + id, null);
 
         if(resultSet.getCount()<=0)
             esta=false;

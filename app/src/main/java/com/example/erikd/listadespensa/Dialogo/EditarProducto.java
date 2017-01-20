@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+
+import com.example.erikd.listadespensa.ActividadListaProductos;
 import com.example.erikd.listadespensa.MainActivity;
 import com.example.erikd.listadespensa.R;
 
@@ -44,7 +46,7 @@ public class EditarProducto extends DialogFragment {
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)getActivity()).capturarParametros(Producto.getText().toString(), Precio.getText().toString());
+                ((ActividadListaProductos)getActivity()).capturarParametros(Producto.getText().toString(), Precio.getText().toString());
                 listenerActualizar.iniciarListener_actualizar();
                 dismiss();
 
