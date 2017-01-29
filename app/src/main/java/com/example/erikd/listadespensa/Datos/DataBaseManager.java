@@ -29,6 +29,9 @@ public abstract class DataBaseManager {
     abstract void insertar_4parametros(String id, String nombre, String precio, String estado);
     abstract void actualizar_4parametros(String id, String nombre, String precio, String estado);
 
+    abstract void insertar_5parametrosCab(String id, String titulo, String fecha, String latitud, String longitud);
+    abstract void actualizar_5parametrosCab(String id, String titulo, String fecha, String latitud, String longitud);
+
 
     abstract public void eliminar(String id);
     abstract public void eliminarTodo();
@@ -36,9 +39,8 @@ public abstract class DataBaseManager {
     abstract Boolean compruebaRegistro(String id);
 
 
-
-
-
+    abstract public void eliminarCab(String id);
+    abstract public Cursor cargarCursorCabecera();
 
 
 

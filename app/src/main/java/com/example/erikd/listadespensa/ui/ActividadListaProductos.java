@@ -1,40 +1,29 @@
-package com.example.erikd.listadespensa;
+package com.example.erikd.listadespensa.ui;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.database.DatabaseUtils;
-import android.os.AsyncTask;
 import android.speech.RecognizerIntent;
 
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.example.erikd.listadespensa.Adaptador.CartaDespensaAdapter;
 import com.example.erikd.listadespensa.Datos.DataBaseManagerDespensa;
 import com.example.erikd.listadespensa.Dialogo.EditarProducto;
 import com.example.erikd.listadespensa.Dialogo.InsertarProducto;
-import com.example.erikd.listadespensa.Modelo.CabeceraPedido;
 import com.example.erikd.listadespensa.Modelo.Despensa;
-import com.example.erikd.listadespensa.Modelo.DetallePedido;
-import com.example.erikd.listadespensa.Modelo.LugarCompra;
-import com.example.erikd.listadespensa.Modelo.Producto;
-import com.example.erikd.listadespensa.SQLite.OperacionesBaseDatos;
+import com.example.erikd.listadespensa.R;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
@@ -56,8 +45,8 @@ protected static final int RESULT_SPEECH = 1;
 
 
 
-@Override
-protected void onCreate(Bundle savedInstanceState) {
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad_lista_productos);
 

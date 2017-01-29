@@ -11,8 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.example.erikd.listadespensa.ActividadListaProductos;
-import com.example.erikd.listadespensa.MainActivity;
+import com.example.erikd.listadespensa.ui.ActividadListaProductos;
 import com.example.erikd.listadespensa.R;
 
 /**

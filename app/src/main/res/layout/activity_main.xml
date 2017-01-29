@@ -5,46 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
-
+    tools:context=".ui.MainActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview1"
-        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recyclerviewCabecera"
         android:layout_width="match_parent"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:scrollbars="vertical"/>
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        />
 
-    <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:id="@+id/menu_fab"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabCabecera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        fab:fab_addButtonColorNormal="?attr/colorPrimary"
-        fab:fab_addButtonSize="normal"
-        fab:fab_labelsPosition="left">
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/accion_teclado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            fab:fab_colorNormal="?attr/colorAccent"
-            fab:fab_icon="@drawable/ic_create"
-            fab:fab_size="mini" />
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/accion_voz"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            fab:fab_colorNormal="?attr/colorAccent"
-            fab:fab_icon="@drawable/ic_mic"
-            fab:fab_size="mini" />
-
-
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
-
-
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_add"
+        app:layout_behavior="com.example.erikd.listadespensa.ui.FabScrollBehavior"/>
 
 </android.support.design.widget.CoordinatorLayout>
+
+
+

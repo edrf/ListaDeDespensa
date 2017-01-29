@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ActividadListaProductos">
+    tools:context=".ui.ActividadListaProductos">
+
+
 
 
     <android.support.v7.widget.RecyclerView
@@ -23,8 +25,7 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         fab:fab_addButtonColorNormal="?attr/colorPrimary"
-        fab:fab_addButtonSize="normal"
-        fab:fab_labelsPosition="left">
+        fab:fab_addButtonSize="normal">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/accion_teclado"

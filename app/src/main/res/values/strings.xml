@@ -12,6 +12,9 @@
     <string name="borrando_lista">Se ha borrado toda la lista...</string>
     <string name="borrado_posicion">"Producto Borrado "</string>
     <string name="editar_item">Editar Producto</string>
+    <string name="google_place_api">AIzaSyA2prD1FkCG8lc-DMCMLPX6WFaHMD46bpc</string>
+    <string name="ubicacion_direccion">Dirección: %s</string>
+    <string name="ubicacion_nombre">Nombre: %s</string>
 
     <string-array name="arreglo_productos">
         <item>Pasta de dientes</item>
@@ -20,4 +23,9 @@
         <item>Cloro</item>
         <item>Detergente</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_done">Aceptar</string>
+    <string name="action_clear">Limpiar</string>
 </resources>
